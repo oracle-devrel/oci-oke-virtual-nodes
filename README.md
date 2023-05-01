@@ -5,7 +5,7 @@
 ## Introduction
 OKE virtual nodes deliver a complete serverless Kubernetes experience. With virtual nodes, you can ensure reliable operations of Kubernetes at scale without needing to manage any worker node infrastructure. Virtual nodes provides granular pod-level elasticity and pay-per-pod pricing, while eliminating the operational overhead of managing, scaling, upgrading, and troubleshooting worker nodes’ infrastructure. 
 
-The deployment of standard software temporarily require changes in deployment manifests. This repository includes modified manifests.
+OKE virtual nodes does not currently support all specs in deployment manifests. For more information, refer to [Virtual Nodes and Virtual Node Pools](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengcomparingvirtualwithmanagednodes_topic.htm#contengcomparingvirtualwithmanagednodes_topic-virtualnodes). This repository includes examples of modified manifests for common software packages.
 
 ## Getting Started
 ### Deploy metrics server in a cluster with virtual nodes
