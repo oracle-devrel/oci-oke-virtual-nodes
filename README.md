@@ -9,7 +9,6 @@ The deployment of standard software temporarily require changes in deployment ma
 
 ## Getting Started
 ### Deploy metrics server in a cluster with virtual nodes
-Execute the following command:
 ```
 kubectl apply -f https://raw.githubusercontent.com/oracle-devrel/oci-oke-virtual-nodes/main/metrics-server/components.yml
 ```
