@@ -18,10 +18,9 @@ kubectl apply -f https://raw.githubusercontent.com/oracle-devrel/oci-oke-virtual
 ```
 
 # Prerequisites
-Here are the following requirement to use this repository:
-- You have an Oracle Cloud Infrastructure (OCI) account. Get started with Oracle Cloud Infrastructure today with our [Oracle Cloud Free Trial](https://www.oracle.com/cloud/free/)
-- A Kubernetes cluster is created with Oracle Container Engine for Kubernetes (OKE). For more information, refer to [Creating Kubernetes Clusters](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengcreatingclusterusingoke.htm)
-- The Kubeconfig file is configured to access the Kubernetes cluster. For more information, refer to [Accessing a Cluster Using Kubectl](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengaccessingclusterkubectl.htm)
+- You have an Oracle Cloud Infrastructure (OCI) account. Get started with Oracle Cloud Infrastructure today with our [Oracle Cloud Free Trial](https://www.oracle.com/cloud/free/).
+- A Kubernetes cluster is created with Oracle Container Engine for Kubernetes (OKE). For more information, refer to [Creating Kubernetes Clusters](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengcreatingclusterusingoke.htm).
+- The Kubeconfig file is configured to access the Kubernetes cluster. For more information, refer to [Accessing a Cluster Using Kubectl](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengaccessingclusterkubectl.htm).
 
 ## Notes/Issues
 * Nothing at this time
