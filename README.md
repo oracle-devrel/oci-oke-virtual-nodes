@@ -5,16 +5,31 @@
 ## Introduction
 OKE virtual nodes deliver a complete serverless Kubernetes experience. With virtual nodes, you can ensure reliable operations of Kubernetes at scale without needing to manage any worker node infrastructure. Virtual nodes provides granular pod-level elasticity and pay-per-pod pricing, while eliminating the operational overhead of managing, scaling, upgrading, and troubleshooting worker nodes’ infrastructure. 
 
-OKE virtual nodes does not currently support all specs in deployment manifests. For more information, refer to [Virtual Nodes and Virtual Node Pools](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengcomparingvirtualwithmanagednodes_topic.htm#contengcomparingvirtualwithmanagednodes_topic-virtualnodes). This repository includes examples of modified manifests for common software packages.
+OKE virtual nodes does not currently support all specs in deployment manifests. For more information, refer to [Virtual Nodes and Virtual Node Pools](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengcomparingvirtualwithmanagednodes_topic.htm#contengcomparingvirtualwithmanagednodes_topic-virtualnodes). This repository includes modified manifests for common software packages and examples of deployments.
 
-## Getting Started
+## Deployment of common software packages
 ### Deploy metrics server in a cluster with virtual nodes
 ```
 kubectl apply -f https://raw.githubusercontent.com/oracle-devrel/oci-oke-virtual-nodes/main/metrics-server/components.yml
 ```
-### Deploy Nginx Ingress Controller in a cluster with virtual Nodes
+### Deploy Nginx Ingress Controller in a cluster with virtual nodes
 ```
 kubectl apply -f https://raw.githubusercontent.com/oracle-devrel/oci-oke-virtual-nodes/main/ingress-nginx/deploy.yaml
+```
+### Deploy the dashboard in a cluster with virtual nodes using:
+```
+kubectl apply -f https://raw.githubusercontent.com/oracle-devrel/oci-oke-virtual-nodes/main/kubernetes-dashboard/recommended.yaml
+```
+Refer to the [detailed instructions](https://github.com/oracle-devrel/oci-oke-virtual-nodes/blob/main/kubernetes-dashboard/README.md) to access the dashboard.
+
+## Deployment examples
+### Nginx with a service type load balancer exposed on port TCP/80
+```
+kubectl apply -f https://raw.githubusercontent.com/oracle-devrel/oci-oke-virtual-nodes/main/nginx-svc/nginx.yaml
+```
+### Pod with a sidecar that sends logs on a flat file to a persistent location such as Opensearch.
+```
+kubectl apply -f https://raw.githubusercontent.com/oracle-devrel/oci-oke-virtual-nodes/main/date-logging.yaml
 ```
 
 # Prerequisites
