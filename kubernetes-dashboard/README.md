@@ -24,13 +24,13 @@ Now access Dashboard at http://localhost:8001/api/v1/namespaces/kubernetes-dashb
 ## Change Log
 The following lines are commented out from the Kubernetes Dashboard deployment manifest version 2.7.0: https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
 - lines 211 to 217
-#          livenessProbe:
-#            httpGet:
-#              scheme: HTTPS
-#              path: /
-#              port: 8443
-#            initialDelaySeconds: 30
-#            timeoutSeconds: 30
+          livenessProbe:
+            httpGet:
+              scheme: HTTPS
+              path: /
+              port: 8443
+            initialDelaySeconds: 30
+            timeoutSeconds: 30
 
 Previously, the following lines are commented out from the Kubernetes Dashboard deployment manifest version 2.7.0.
 - lines 211 to 222
