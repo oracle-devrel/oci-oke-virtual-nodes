@@ -18,8 +18,8 @@ data:
         host 10.0.21.195
         port 9200
         tls On
-        HTTP_User elastic
-        HTTP_Passwd wNKhoWtnh9_Emm9
+        HTTP_User XXXXX
+        HTTP_Passwd XXXXX
         Index fluent-bit
         Suppress_Type_Name On
 ---

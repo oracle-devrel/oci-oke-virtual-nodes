@@ -137,7 +137,7 @@ spec:
         - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
         - --kubelet-use-node-status-port
         - --metric-resolution=15s
-        image: registry.k8s.io/metrics-server/metrics-server:v0.6.3
+        image: registry.k8s.io/metrics-server/metrics-server:v0.6.4
         imagePullPolicy: IfNotPresent
 #        livenessProbe:
 #          failureThreshold: 3
@@ -164,10 +164,10 @@ spec:
             cpu: 100m
             memory: 200Mi
         securityContext:
-#          allowPrivilegeEscalation: false
-#          readOnlyRootFilesystem: true
-#          runAsNonRoot: true
-#          runAsUser: 1000
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 1000
         volumeMounts:
         - mountPath: /tmp
           name: tmp-dir
