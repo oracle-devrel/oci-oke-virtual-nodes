@@ -215,11 +215,11 @@ spec:
 #              port: 8443
 #            initialDelaySeconds: 30
 #            timeoutSeconds: 30
-#          securityContext:
-#            allowPrivilegeEscalation: false
-#            readOnlyRootFilesystem: true
-#            runAsUser: 1001
-#            runAsGroup: 2001
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsUser: 1001
+            runAsGroup: 2001
       volumes:
         - name: kubernetes-dashboard-certs
           secret:
@@ -289,11 +289,11 @@ spec:
           volumeMounts:
           - mountPath: /tmp
             name: tmp-volume
-#          securityContext:
-#            allowPrivilegeEscalation: false
-#            readOnlyRootFilesystem: true
-#            runAsUser: 1001
-#            runAsGroup: 2001
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsUser: 1001
+            runAsGroup: 2001
       serviceAccountName: kubernetes-dashboard
       nodeSelector:
         "kubernetes.io/os": linux

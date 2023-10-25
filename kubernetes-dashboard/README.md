@@ -2,11 +2,6 @@
 Deployment file for Kubernetes Dashboard on OKE Virtual Nodes.
 This is a modified version from the upstream deployment file at https://github.com/kubernetes/dashboard.
 
-## Change Log
-The following lines are commented out from https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml.
-- 211 to 222
-- 292 to 296
-
 ## Getting started
 Deploy the dashboard in a cluster with virtual nodes using:
 ```
@@ -25,3 +20,20 @@ Start a proxy on your workstation to access the dashboard:
 kubectl proxy
 ```
 Now access Dashboard at http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+
+## Change Log
+The following lines are commented out from the Kubernetes Dashboard deployment manifest version 2.7.0: https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+- lines 211 to 217
+```
+          livenessProbe:
+            httpGet:
+              scheme: HTTPS
+              path: /
+              port: 8443
+            initialDelaySeconds: 30
+            timeoutSeconds: 30
+```
+
+Previously, the following lines are commented out from the Kubernetes Dashboard deployment manifest version 2.7.0.
+- lines 211 to 222
+- lines 292 to 296
