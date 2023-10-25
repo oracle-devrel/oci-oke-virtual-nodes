@@ -15,7 +15,7 @@ data:
     [OUTPUT]
         name  opensearch
         match *
-        host 10.0.21.195
+        host X.X.X.X
         port 9200
         tls On
         HTTP_User XXXXX
