@@ -31,6 +31,11 @@ The following lines are commented out from the metrics-server deployment manifes
           periodSeconds: 10
 ```
 
+In addtion, the parameter metric-resolutionis set to 60s on line 139. OKE Virtual Nodes support a minimum metric resolution of 60 seconds.
+```
+        - --metric-resolution=60s
+```
+
 Previously, the following lines were commented out from the metrics-server deployment manifest v0.6.3.
 - lines 142 to 148
 - lines 154 to 161
